@@ -369,7 +369,7 @@ class CompilerContainer {
     // Workers cannot load js on "file:"-URLs and we get a
     // "Uncaught RangeError: Maximum call stack size exceeded" error on Chromium,
     // resort to non-worker version in that case.
-    if (this.browserSupportWorker && (!isChrome || (isChrome && isFromWhiteList))) {
+    if (this.browserSupportWorker() && (!isChrome || (isChrome && isFromWhiteList))) {
       this.compileTabLogic.compiler.loadVersion(true, url)
       this.setVersionText('(loading using worker)')
     } else {

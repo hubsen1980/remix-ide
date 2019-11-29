@@ -380,9 +380,9 @@ class CompilerContainer {
 
   _retrieveOS () {
     let osName = 'Unknown OS'
-    if (navigator.appVersion.indexOf('Win') !== -1) osName = 'Windows'
-    if (navigator.appVersion.indexOf('Mac') !== -1) osName = 'MacOS'
-    if (navigator.appVersion.indexOf('Linux') !== -1) osName = 'Linux'
+    if (navigator.platform.indexOf('Win') !== -1) osName = 'Windows'
+    if (navigator.platform.indexOf('Mac') !== -1) osName = 'MacOS'
+    if (navigator.platform.indexOf('Linux') !== -1) osName = 'Linux'
     return osName
   }
 
